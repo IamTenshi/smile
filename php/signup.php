@@ -1,7 +1,7 @@
 <?php
     //*Insert data into database(Sign up)
-    require('config.php');
     session_start();
+    require('config.php');
 
     if (isset($_POST['signup'])) {
         $name = mysqli_real_escape_string($conn, $_POST['name']);
@@ -9,7 +9,6 @@
         $email = mysqli_real_escape_string($conn, $_POST['email-signup']);
         $password = mysqli_real_escape_string($conn, $_POST['password-signup']);
 
-        //TODO: Validaciones
         require('signup_validate.php');
 
         //Enviar datos a la base de datos
