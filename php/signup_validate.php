@@ -73,6 +73,7 @@
             array_push($error, "Your Password Must Contain At Least 1 Lowercase Letter");
             echo "<script>alert('Your Password Must Contain At Least 1 Lowercase Letter!');</script>";
         }
+        exit;
     } else {
         array_push($error, "Password must be filled");
         echo "<script>alert('Password must be filled');</script>";
