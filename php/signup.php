@@ -20,6 +20,7 @@
 
             echo "<script>alert('A new user has been created');</script>";
         }
+        exit;
     }
 
     $conn->close();
