@@ -18,7 +18,11 @@
 
             mysqli_query($conn, $query);
 
-            echo "<script>alert('A new user has been created');</script>";
+            echo '
+                <script>
+                    alert("A new user has been created");
+                </script>
+            ';
         }
         exit;
     }
