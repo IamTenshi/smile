@@ -10,7 +10,7 @@
         or die ('Could not connect to the database server' . mysqli_connect_error());
 
     mysqli_select_db($conn,$dbname)
-        or die ("No se encuentra la Base de datos");
+        or die ("Could not find the database");
 
     mysqli_set_charset($conn,"utf8");
 ?>
