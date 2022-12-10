@@ -1,7 +1,7 @@
 <?php
     //*Insert data into database(Sign up)
+    require_once('config.php');
     session_start();
-    require('config.php');
 
     if (isset($_POST['signup'])) {
         $name = mysqli_real_escape_string($conn, $_POST['name']);
@@ -20,12 +20,14 @@
 
             echo '
                 <script>
-                    alert("A new user has been created");
+                    alert("A new user has been created, now you can login");
+                    window.location = "../index.html";
                 </script>
             ';
         }
         exit;
     }
 
+    session_destroy();
     $conn->close();
 ?>

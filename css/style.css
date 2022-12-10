@@ -82,7 +82,7 @@ input {
   width: 100%;
 }
 
-input[name=password-signup] ~ button {
+button[name=signup] {
   margin-top: 10px;
 }
 

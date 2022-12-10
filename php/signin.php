@@ -1,9 +1,8 @@
 <?php 
     //*Validate user
-    session_start();
     require_once('config.php');
+    session_start();
 
-    //TODO: Programar el inicio de sesion
     $email = mysqli_real_escape_string($conn, $_POST['email-signin']);
     $password = mysqli_real_escape_string($conn, $_POST['password-signin']);
     
@@ -17,11 +16,12 @@
         echo '
             <script>
                 alert("The user does not exist, please check your data");
-                window.location = "../index.html";
             </script>
         ';
+        header("location: ../views/welcome.php");
         exit;
     }
 
+    session_destroy();
     $conn->close();
 ?>
